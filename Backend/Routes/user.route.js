@@ -18,7 +18,8 @@ userRouter.post("/signup" , async(req,res)=>{
                 await data.save()
                 res.status(200).send({msg:"User Registered Successfuly!" , user:req.body})
             })
-        } catch (error) {
+        } 
+        catch (error) {
             res.status(404).send({err:error})
         }
     }
